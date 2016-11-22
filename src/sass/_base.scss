@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+
+$primcolor: #64FFDA;
+$textcolor: #0D0A1D;
+$fadetextcolor: #555555;
+
+$normalfont: 'Roboto Mono', sans-serif;
+
+$fontsize: 14px;
+
+* {
+	box-sizing: border-box;
+	font-family: $normalfont;
+}
+
+html {
+	background: $primcolor;
+	color: $textcolor;
+	font-size: $fontsize;
+	text-align: center;
+	
+	@media screen and (max-width: 1024px) {
+		font-size: 125%;
+	}
+}
+
+*::selection {
+    background: $textcolor;
+    color: #fff;
+}

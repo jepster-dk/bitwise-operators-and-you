@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name='viewport' content='initial-scale=1.0, user-scalable=no'/>
+	<title>Bitwise Operators</title>
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="dist/js/main-min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/css/main.css"/>
+		
+</head>
+<body>
+    <header>
+        <h1>Bitwise Operators & You</h1>
+        <p>The bitwise operators of Javascript can be incredibly useful tools. But they are a bit obtuse at times. So, in order to train my own understanding of how the bitwise operators work, I built this tiny test for myself. Now, you can use it as well.</p>
+    </header>
+	<main>
+		<div class="question-container">
+			<h2 class="question-title"></h2>
+			<p class="question">What is <span class="question-specific"></span></p>
+			<p class="bit-one"></p>
+			<p class="bit-two"></p>
+			<a href="#" title="Show/hide bits" class="toggle-bits">Show as bits</a>
+			<p class="answer"></p>
+			<p class="timer"></p>
+			<form class="answer-form">
+				<div class="input-container">
+					<input type="number" class="response" id="response" placeholder="Your answer">
+					<input type="submit" value="Guess">
+				</div>
+			</form>
+		</div>
+		<div class="answer-container">
+			<p class="points"><span class="points-count"></span> out of <span class="question-count"></span> correct</p>
+			<a href="#" title="Share your score on Twitter">Share score on Twitter</a>
+		</div>
+	</main>
+	<footer>
+		<p>Bitwise Operators & You was built by <a href="http://jepster.dk">@jepster_dk</a></p>
+	</footer>
+</body>
+</html>

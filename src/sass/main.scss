@@ -1,0 +1,104 @@
+@import 'base.scss';
+
+a {
+	color: $fadetextcolor;
+}
+
+a:hover {
+	border-bottom: 1px solid $fadetextcolor;
+}
+
+header {
+	margin: 0 auto;
+	width: 40rem;
+}
+
+main > div {
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	margin: 2rem auto;
+	padding: 1rem;
+	position: relative;
+	width: 40rem;
+}
+
+.question-container {
+	background: #fff;
+	height: 25rem;
+}
+
+.question-container.remove-q {
+	animation: 'getNewQuestion' 1500ms 1 ease-in-out;
+}
+
+@keyframes 'getNewQuestion' {
+	0% {
+		transform: translate(0);
+	}
+	50% {
+		transform: translate(-200%);
+	}
+	51% {
+		// Move it to the other side
+		transform: translateX(200%) translateY(-5000%);
+	}
+	52% {
+		transform: translate(200%) translateY(0);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+
+h1, h2 {
+	font-weight: 700;
+}
+
+.question {
+	font-size: 1.5rem;
+}
+
+.question-specific {
+	font-weight: 700;
+}
+
+.bit-one, .bit-two {
+	display: none;
+}
+
+.question-container a {
+	font-size: 0.8rem;
+}
+
+form {
+	bottom: 1rem;
+	position: absolute;
+}
+
+.input-container {
+	margin: 0 auto;
+	width: 40rem;
+}
+
+input {
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	height: 3rem;
+	padding: 0.5rem 1rem;
+}
+
+input[type="submit"] {
+	background: $primcolor;
+}
+
+.answer-container {
+	
+}
+
+footer {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
