@@ -93,16 +93,12 @@ input[type="submit"] {
 	background: $primcolor;
 }
 
-.answer-container {
-	
-}
-
 .tweet-link {
 	display: none;
 }
 
 footer {
 	bottom: 0;
-	position: fixed;
+	position: relative;
 	width: 100%;
 }

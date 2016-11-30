@@ -15,12 +15,13 @@ $fontsize: 14px;
 }
 
 html {
+	background: $primcolor;
 	color: $textcolor;
 	font-size: $fontsize;
 	text-align: center;
 	
 	@media screen and (max-width: 1024px) {
-		font-size: 125%;
+		font-size: 75%;
 	}
 }
 
@@ -28,7 +29,10 @@ body {
 	background: $primcolor;
 	background: linear-gradient($seccolor, $primcolor);
 	background-size: 100% 100%;
-	background-size: 100vw 100vh;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	width: 100%;
 }
 
 *::selection {
