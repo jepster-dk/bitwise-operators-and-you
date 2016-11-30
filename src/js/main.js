@@ -13,6 +13,7 @@ var operators = ['<<', '>>', '>>>', '~', '&', '|', '^'];
 
 $(document).ready(function() {
 	$('.points-count').text(points);
+	$('.level-count').text(Math.floor(points / 5) + 1);
 	setQuestion();
 
 	$('.answer-form').on('submit', function(e) {
@@ -52,7 +53,7 @@ function setQuestion() {
 	}
 
 	var question = '';
-	if(thisOperator != '~') {
+	if(thisOperator !== '~') {
 		question = firstBit + ' ' + thisOperator + ' ' + secondBit;
 	}
 	else {
@@ -145,13 +146,23 @@ function checkAnswer() {
 	countdownTime();
 
 	if(points % 5 === 0) {
-		maxBit = (maxBit * 2) + 1;
+		if((maxBit * 2) + 1 <= 2147483647 && (maxBit * 2) + 1 >= -2147483647) {
+			maxBit = (maxBit * 2) + 1;
+		}
 	}
+	$('.level-count').text(Math.floor(points / 5) + 1);
+
+	$('.tweet-link').show();
+	var tweetTxt = 'I reached level ' + Math.floor(points / 5) + ', and got ' + points + ' out of ' + questionCount + ' correct in the bitwise operators test! I\'m such a fucking nerd.'
+	var tweetUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetTxt);
+	tweetUrl +=  '&url=' + encodeURIComponent('https://jepster-dk.github.io/bitwise-operators-and-you/');
+	$('.tweet-link').attr('href', tweetUrl);
 }
 
 function removeQuestion() {
 	$('.question-container').addClass('remove-q');
 	setTimeout(setQuestion, 750);
+	setTimeout(function() {$('.question-container').removeClass('remove-q');}, 1499);
 }
 
 function countdownTime() {

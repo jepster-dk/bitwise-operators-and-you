@@ -29,7 +29,7 @@ main > div {
 }
 
 .question-container.remove-q {
-	animation: 'getNewQuestion' 1500ms 1 ease-in-out;
+	animation: 'getNewQuestion' 1500ms infinite ease-in-out;
 }
 
 @keyframes 'getNewQuestion' {
@@ -95,6 +95,10 @@ input[type="submit"] {
 
 .answer-container {
 	
+}
+
+.tweet-link {
+	display: none;
 }
 
 footer {

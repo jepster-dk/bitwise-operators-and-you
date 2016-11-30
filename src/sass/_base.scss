@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
 $primcolor: #64FFDA;
+$seccolor: #1DE9B6;
 $textcolor: #0D0A1D;
 $fadetextcolor: #555555;
 
@@ -14,7 +15,6 @@ $fontsize: 14px;
 }
 
 html {
-	background: $primcolor;
 	color: $textcolor;
 	font-size: $fontsize;
 	text-align: center;
@@ -22,6 +22,13 @@ html {
 	@media screen and (max-width: 1024px) {
 		font-size: 125%;
 	}
+}
+
+body {
+	background: $primcolor;
+	background: linear-gradient($seccolor, $primcolor);
+	background-size: 100% 100%;
+	background-size: 100vw 100vh;
 }
 
 *::selection {
