@@ -23,6 +23,14 @@ html {
 	@media screen and (max-width: 1024px) {
 		font-size: 75%;
 	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 55%;
+	}
+
+	@media screen and (max-width: 512px) {
+		font-size: 40%;
+	}
 }
 
 body {
